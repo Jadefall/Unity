@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3f6f3f7c722b4544b97e3c75840aa33, type: 3}
   m_Name: AutoExposure
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   enabled:
     overrideState: 1
     value: 1
@@ -124,7 +124,7 @@ MonoBehaviour:
     value: 5
   threshold:
     overrideState: 1
-    value: 0.1
+    value: 0.3
   softKnee:
     overrideState: 1
     value: 0.674
@@ -133,10 +133,10 @@ MonoBehaviour:
     value: 65472
   diffusion:
     overrideState: 1
-    value: 5
+    value: 6
   anamorphicRatio:
     overrideState: 1
-    value: 0.25
+    value: 0.39
   color:
     overrideState: 0
     value: {r: 1, g: 1, b: 1, a: 1}
