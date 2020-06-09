@@ -7,38 +7,43 @@ public class GameManager : MonoBehaviour
     public GameObject golem;
     public Vector3 spawnPoint;
 
-    public int noGolems = 0;
-    public int spawnedGolems;
-    public int maxGolems;
+    public int totalGolems = 10;
+    private int numGolems = 0;
+    private int spawnedGolems = 0;
+
+    private int SpawnID;
 
     public List<float> list = new List<float>();
-    public float waveTimer;
+    public float numWaves;
     public float timeTillWave;
     public float totalWaves;
+    public float waveTimer;
 
-    public bool spawn;
+    private bool waveSpawn = false;
+    public bool spawn = true;
 
-    private void Update()
+    void Start()
     {
-        if(spawnedGolems == noGolems)
-        {
-            wave();
-        }
-        if(spawnedGolems == maxGolems)
-        {
-            spawn = false;
-        }
+        
     }
-    
-    public void wave()
+    void Update()
     {
-        if (spawn == true)
+        if (spawn)
         {
-            if (spawnedGolems == 0)
+            if(numWaves < totalWaves + 1)
             {
-                if (waveTimer == 0)
+                if (waveSpawn)
                 {
                     spawnGolem();
+                }
+                if (spawnedGolems == 0)
+                {
+                    waveSpawn = true;
+                    numWaves++;
+                }
+                if(spawnedGolems == totalGolems)
+                {
+                    waveSpawn = false;
                 }
             }
         }
@@ -47,11 +52,29 @@ public class GameManager : MonoBehaviour
     private void spawnGolem()
     {
         Instantiate(golem, spawnPoint, Quaternion.identity);
+        golem.SendMessage("setName", SpawnID);
+        numGolems++;
         spawnedGolems++;
     }
-
-    public void killGolem()
+    public void killGolem(int sID)
     {
-        spawnedGolems--;
+        if (SpawnID == sID)
+        {
+            numGolems--;
+        }
+    }
+    public void enableSpawner(int sID)
+    {
+        if (SpawnID == sID)
+        {
+            spawn = true;
+        }
+    }
+    public void disableSpawner(int sID)
+    {
+        if (SpawnID == sID)
+        {
+            spawn = false;
+        }
     }
 }
