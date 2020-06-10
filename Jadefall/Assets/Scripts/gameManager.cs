@@ -13,11 +13,9 @@ public class gameManager : MonoBehaviour
 
     private int SpawnID;
 
-    public List<float> list = new List<float>();
     public float numWaves;
-    public float timeTillWave;
     public float totalWaves;
-    public float waveTimer;
+    public float timeTillNextEnemy;
 
     private bool waveSpawn = false;
     public bool spawn = true;
