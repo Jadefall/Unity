@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - PlaySphere
+  - HOUSE
   layers:
   - Default
   - TransparentFX
