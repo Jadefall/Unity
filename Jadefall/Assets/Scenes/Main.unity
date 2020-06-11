@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 264335284}
-  m_IndirectSpecularColor: {r: 0.0023733377, g: 0.0048611723, b: 0.011100418, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1079,6 +1079,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Mushroom_House
+      objectReference: {fileID: 0}
+    - target: {fileID: 1399484908502300934, guid: b1f7ca1a118ccb3439a93e58e3b4ee27,
+        type: 3}
+      propertyPath: m_TagString
+      value: HOUSE
       objectReference: {fileID: 0}
     - target: {fileID: 2401781466032718568, guid: b1f7ca1a118ccb3439a93e58e3b4ee27,
         type: 3}
@@ -9194,12 +9199,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e5bcdc6ae4789e43aab479706624b46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  golem: {fileID: 332290271572514899, guid: c1c8f38ae55edd24dbe2297bec277d0f, type: 3}
-  spawnPoint: {x: 149.07, y: 56.15, z: 47.86}
+  golem: {fileID: 6586882235515179353, guid: 184b7e75d44c6414bae6ed24cbc2c5d6, type: 3}
+  spawnPoint: {x: 149.07, y: 52.28, z: 47.86}
   totalGolems: 1
+  numGolems: 0
+  spawnedGolems: 0
   numWaves: 0
   totalWaves: 10
-  timeTillNextEnemy: 0
+  timeTillNextEnemy: 3
   spawn: 1
 --- !u!4 &1914626153
 Transform:
@@ -9919,6 +9926,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204340777384289172, guid: abcd2ee546559034b882d065c7abdfb1,
+        type: 3}
+      propertyPath: mouseSensitivity
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 9204340778237244668, guid: abcd2ee546559034b882d065c7abdfb1,
         type: 3}

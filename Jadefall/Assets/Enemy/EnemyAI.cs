@@ -9,21 +9,43 @@ public class EnemyAI : MonoBehaviour
     public GameObject house;
     public GameObject player;
 
+    public float hP;
+    public float attackDamage;
+    public float attackRange;
+    public int currentTargetDistance;
+
     public Vector3 attack;
     public float enemySpeed;
     public float golemDistance;
 
-    public int attackRange;
-    public int currentTargetDistance;
+    private Transform target;
 
-    private void Update()
+    void Start()
     {
-        transform.Translate(attack * Time.deltaTime * enemySpeed);
-        if (attackRange < currentTargetDistance)
+        target = GameObject.FindGameObjectWithTag("HOUSE").GetComponent<Transform>();
+        
+    }
+    void Update()
+    {
+        transform.LookAt(target);
+        Vector3 dir = target.position - transform.position;
+        transform.Translate(dir.normalized * enemySpeed * Time.deltaTime, Space.World);
+
+        float distance = Vector3.Distance(golem.transform.position, target.position);
+        if(distance < currentTargetDistance)
         {
             attackMove();
         }
     }
+
+    public void golemHP()
+    {
+        if(hP >= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
+
 
     public void attackMove()
     {

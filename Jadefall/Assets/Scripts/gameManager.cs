@@ -8,8 +8,8 @@ public class gameManager : MonoBehaviour
     public Vector3 spawnPoint;
 
     public int totalGolems = 10;
-    private int numGolems = 0;
-    private int spawnedGolems = 0;
+    public int numGolems = 0;
+    public int spawnedGolems = 0;
 
     private int SpawnID;
 
@@ -26,6 +26,16 @@ public class gameManager : MonoBehaviour
     }
     void Update()
     {
+        timeTillNextEnemy -= Time.deltaTime;
+        if (timeTillNextEnemy < 0)
+        {
+
+        }
+
+
+
+
+
         if (spawn)
         {
             if (numWaves < totalWaves + 1)
@@ -39,13 +49,14 @@ public class gameManager : MonoBehaviour
                     waveSpawn = true;
                     numWaves++;
                 }
-                if (spawnedGolems == totalGolems)
+               if (spawnedGolems == totalGolems)
                 {
                     waveSpawn = false;
                 }
             }
         }
     }
+
 
     private void spawnGolem()
     {
