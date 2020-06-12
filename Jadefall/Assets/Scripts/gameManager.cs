@@ -6,6 +6,10 @@ public class gameManager : MonoBehaviour
 {
     public GameObject golem;
     public Vector3 spawnPoint;
+    public Vector3 spawnPoint2;
+    public Vector3 spawnpoint3;
+    public Vector3 spawnpoint4;
+    public Vector3 spawnpoint5;
 
     public int totalGolems = 10;
     public int numGolems = 0;
@@ -27,10 +31,7 @@ public class gameManager : MonoBehaviour
     void Update()
     {
         timeTillNextEnemy -= Time.deltaTime;
-        if (timeTillNextEnemy < 0)
-        {
 
-        }
 
 
 
@@ -42,7 +43,12 @@ public class gameManager : MonoBehaviour
             {
                 if (waveSpawn)
                 {
-                    spawnGolem();
+                    if (timeTillNextEnemy < 0)
+                    {
+                        spawnGolem();
+                        timeTillNextEnemy = 2;
+
+                    }
                 }
                 if (spawnedGolems == 0)
                 {
@@ -60,6 +66,7 @@ public class gameManager : MonoBehaviour
 
     private void spawnGolem()
     {
+        Vector3 spawnPoint = new Vector3(172, 56,Random.Range(74, 36));
         Instantiate(golem, spawnPoint, Quaternion.identity);
         numGolems++;
         spawnedGolems++;
