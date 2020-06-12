@@ -2260,6 +2260,9 @@ GameObject:
   - component: {fileID: 7868377502826128202}
   - component: {fileID: 1128117388636922430}
   - component: {fileID: 4881450474565348284}
+  - component: {fileID: -7577423490794409018}
+  - component: {fileID: 4107303151694979396}
+  - component: {fileID: -7917358249782319188}
   m_Layer: 0
   m_Name: jadegolem (1)
   m_TagString: Untagged
@@ -2306,14 +2309,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   house: {fileID: 0}
   player: {fileID: 0}
+  anim: {fileID: 0}
+  hP: 30
+  attackDamage: 10
+  attackRange: 5
+  currentTargetDistance: 2
   attack: {x: 0, y: 0, z: 0}
-  enemySpeed: 2
+  enemySpeed: 10
   golemDistance: 0
-  rb: {fileID: 4881450474565348284}
-  enemyFloat: 0
-  attackRange: 0
-  currentTargetDistance: 0
-  target: {fileID: 0}
 --- !u!54 &4881450474565348284
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2330,6 +2333,61 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!64 &-7577423490794409018
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6586882235515179353}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
+--- !u!195 &4107303151694979396
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6586882235515179353}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!95 &-7917358249782319188
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6586882235515179353}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f87523d4e873dad47ba22160b4c3b801, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6775821761934703589
 GameObject:
   m_ObjectHideFlags: 0

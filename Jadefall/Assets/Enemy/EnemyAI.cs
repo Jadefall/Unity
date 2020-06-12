@@ -8,6 +8,7 @@ public class EnemyAI : MonoBehaviour
     private NavMeshAgent golem;
     public GameObject house;
     public GameObject player;
+    public Animator anim;
 
     public float hP;
     public float attackDamage;
@@ -22,8 +23,9 @@ public class EnemyAI : MonoBehaviour
 
     void Start()
     {
+        golem = GetComponent<NavMeshAgent>();
         target = GameObject.FindGameObjectWithTag("HOUSE").GetComponent<Transform>();
-        
+        anim = GetComponent<Animator>();
     }
     void Update()
     {
@@ -34,21 +36,34 @@ public class EnemyAI : MonoBehaviour
         float distance = Vector3.Distance(golem.transform.position, target.position);
         if(distance < currentTargetDistance)
         {
+            enemySpeed = 0.0f;
             attackMove();
+            house.GetComponent<HouseHealth>().removeHealth();
+        }
+        if (hP == 0)
+        {
+            golemHP();
         }
     }
 
     public void golemHP()
     {
-        if(hP >= 0)
-        {
-            Destroy(gameObject);
-        }
+        enemySpeed = 0.0f;
+        anim.SetBool("death", true);
+    }
+    public void clearGolem()
+    {
+        Destroy(gameObject);
     }
 
-
+    public void attackDamageHouse()
+    {
+        //house.GetComponent<HouseHealth>().removeHealth();
+        
+    }
     public void attackMove()
     {
-
+        anim.SetBool("rightAttack", true);
     }
+
 }
