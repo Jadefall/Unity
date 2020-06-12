@@ -1,16 +1,27 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int health = 100;
+    public float health;
+    public float damagePlayer;
 
+    public void Start()
+    {
+        health = 100;
+    }
     void LateUpdate()
     {
         if (health <= 0)
         {
-            Destroy(gameObject);
+            SceneManager.LoadScene("Menu");
         }
+    }
+    public void removeHealth()
+    {
+        health -= damagePlayer;
+        Debug.Log(health);
     }
 }

@@ -16,17 +16,17 @@ public class FireSpellBehavior : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        Instantiate(explosion, transform.position, transform.rotation);
+        Destroy(gameObject);
+    }
     private void OnTriggerEnter(Collider other)
     {
+
         if (other.gameObject.tag == "Enemy")
         {
 
-            Instantiate(explosion, transform.position, transform.rotation);
-            Destroy(gameObject);
-        }
-
-        if (other.gameObject.tag == "Ground")
-        {
             Instantiate(explosion, transform.position, transform.rotation);
             Destroy(gameObject);
         }

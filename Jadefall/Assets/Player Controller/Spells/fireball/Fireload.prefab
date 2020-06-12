@@ -4771,7 +4771,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 591324638077078272, guid: 3784c87683af51a4fa78105858177e5a,
     type: 3}
-  castTime: 4
+  castTime: 0
   velocity: 10
   cast: 0
 --- !u!1 &4845166427894806728

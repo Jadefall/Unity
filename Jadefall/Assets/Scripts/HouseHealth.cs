@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HouseHealth : MonoBehaviour
 {
-    public int health;
+    public float health;
+    public float damageHouse;
 
     private void Start()
     {
@@ -14,12 +16,12 @@ public class HouseHealth : MonoBehaviour
     {
         if (health <= 0)
         {
-            Destroy(gameObject);
+            SceneManager.LoadScene("Menu");
         }
     }
     public void removeHealth()
     {
-        health -= 30;
+        health -= damageHouse;
         Debug.Log(health);
     }
 }
