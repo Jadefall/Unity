@@ -61,7 +61,6 @@ public class gameManager : MonoBehaviour
     private void spawnGolem()
     {
         Instantiate(golem, spawnPoint, Quaternion.identity);
-        golem.SendMessage("setName", SpawnID);
         numGolems++;
         spawnedGolems++;
     }

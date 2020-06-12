@@ -1799,7 +1799,7 @@ MonoBehaviour:
   lookRadius: 4
   attack: {x: 0, y: 0, z: 0}
   enemySpeed: 3
-  spellDamage: 3500
+  spellDamage: 100
 --- !u!95 &2904077948394556365
 Animator:
   serializedVersion: 3
