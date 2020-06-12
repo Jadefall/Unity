@@ -49,6 +49,5 @@ public class PlayerMouseController : MonoBehaviour
         {
             canFire = true;
         }
-
     }
 }

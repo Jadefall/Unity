@@ -28,7 +28,6 @@ public class FireSpellBehavior : MonoBehaviour
             Instantiate(explosion, transform.position, transform.rotation);
             attackDamageGolem();
             Destroy(gameObject);
-            
         }
         Instantiate(explosion, transform.position, transform.rotation);
         Destroy(gameObject);
