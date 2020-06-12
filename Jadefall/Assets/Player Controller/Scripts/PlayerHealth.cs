@@ -7,6 +7,7 @@ public class PlayerHealth : MonoBehaviour
 {
     public float health;
     public float damagePlayer;
+    public float healPlayer;
 
     public void Start()
     {
@@ -22,6 +23,12 @@ public class PlayerHealth : MonoBehaviour
     public void removeHealth()
     {
         health -= damagePlayer;
+        Debug.Log(health);
+    }
+
+    public void addHealth()
+    {
+        health += healPlayer;
         Debug.Log(health);
     }
 }
