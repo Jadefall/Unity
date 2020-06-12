@@ -5,10 +5,10 @@ using UnityEngine.AI;
 
 public class EnemyAI : MonoBehaviour
 {
+    private GameObject gameManager;
     private NavMeshAgent golem;
-    public GameObject house;
-    public GameObject player;
     public Animator anim;
+    private int spawnerID;
 
     public float hP;
     public int currentTargetDistance;
@@ -19,9 +19,11 @@ public class EnemyAI : MonoBehaviour
 
     private Transform target;
     private Transform playerTarget;
+    public float spellDamage;
 
     void Start()
     {
+        gameManager = (GameObject)GameObject.FindWithTag("GameManager");
         golem = GetComponent<NavMeshAgent>();
         target = GameObject.FindGameObjectWithTag("HOUSE").GetComponent<Transform>();
         playerTarget = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
@@ -49,7 +51,7 @@ public class EnemyAI : MonoBehaviour
             enemySpeed = 0.0f;
             attackMove();
         }
-        if (hP == 0)
+        if (hP <= 0)
         {
             golemHP();
         }
@@ -62,6 +64,7 @@ public class EnemyAI : MonoBehaviour
     }
     public void clearGolem()
     {
+        gameManager.BroadcastMessage("killGolem", spawnerID);
         Destroy(gameObject);
     }
 
@@ -85,5 +88,13 @@ public class EnemyAI : MonoBehaviour
     public void dontAttackPlayer()
     {
         anim.SetBool("attackBoth", false);
+    }
+    public void attackDamageGolem()
+    {
+        hP -= spellDamage;
+    }
+    public void setName(int sName)
+    {
+        spawnerID = sName;
     }
 }

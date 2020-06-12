@@ -69,7 +69,7 @@ public class gameManager : MonoBehaviour
     {
         if (SpawnID == sID)
         {
-            numGolems--;
+            spawnedGolems--;
         }
     }
     public void enableSpawner(int sID)
