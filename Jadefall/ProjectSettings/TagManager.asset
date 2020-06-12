@@ -7,6 +7,7 @@ TagManager:
   - Enemy
   - PlaySphere
   - HOUSE
+  - Ground
   layers:
   - Default
   - TransparentFX

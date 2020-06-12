@@ -1654,7 +1654,7 @@ Transform:
   - {fileID: 305069598}
   - {fileID: 281097507}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &260829667
 PrefabInstance:
@@ -3726,7 +3726,7 @@ MonoBehaviour:
   - {r: 1, g: 0.21621192, b: 0, a: 1}
   - {r: 1, g: 0, b: 0, a: 1}
   hpImg: {fileID: 807767723}
-  playerHealth: {fileID: 1406989992}
+  playerHealth: {fileID: 0}
 --- !u!114 &807767723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6928,7 +6928,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4246442367723126, guid: cb9a83d1109b8ac40b98ff2aa353d542, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4246442367723126, guid: cb9a83d1109b8ac40b98ff2aa353d542, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -6944,37 +6944,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb9a83d1109b8ac40b98ff2aa353d542, type: 3}
---- !u!1 &1406989990 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9204340778237244611, guid: abcd2ee546559034b882d065c7abdfb1,
-    type: 3}
-  m_PrefabInstance: {fileID: 2096892288}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1406989992 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 9204340778237244609, guid: abcd2ee546559034b882d065c7abdfb1,
-    type: 3}
-  m_PrefabInstance: {fileID: 2096892288}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1406989990}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f54a9733ebb501342b75d5eede73b9ae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1406989998
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1406989990}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0557789e1ba317409720daf381af6f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canvas: {fileID: 748048184}
 --- !u!1001 &1406992288
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9248,7 +9217,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4246442367723126, guid: 267a42c8475f6d94f97924478147d71a, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4246442367723126, guid: 267a42c8475f6d94f97924478147d71a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -9475,7 +9444,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4246442367723126, guid: c23cafc0b68a65443a7bdc0874b0bf70, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4246442367723126, guid: c23cafc0b68a65443a7bdc0874b0bf70, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -9880,6 +9849,26 @@ PrefabInstance:
     - target: {fileID: 1523344908, guid: abcd2ee546559034b882d065c7abdfb1, type: 3}
       propertyPath: antialiasingMode
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4662925863365650643, guid: abcd2ee546559034b882d065c7abdfb1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 59.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 4662925863365650643, guid: abcd2ee546559034b882d065c7abdfb1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 102.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 4662925863365650643, guid: abcd2ee546559034b882d065c7abdfb1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 56.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4662925863876192812, guid: abcd2ee546559034b882d065c7abdfb1,
+        type: 3}
+      propertyPath: mouseSensitivity
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 8085899774490448257, guid: abcd2ee546559034b882d065c7abdfb1,
         type: 3}

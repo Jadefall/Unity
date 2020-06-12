@@ -4,11 +4,9 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public Vector3 x;
-    public Vector3 y;
     public Vector3 Jump;
     public Transform cam;
-    public float speed;
+    public float speedMultiplier = 5f;
     public float jumpMultiplier;
     public bool isGrounded;
 
@@ -31,7 +29,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        transform.Translate(Input.GetAxis("Horizontal") * Time.deltaTime * speed, 0, Input.GetAxis("Vertical") * Time.deltaTime * speed);
+        transform.Translate(Input.GetAxis("Horizontal") * Time.deltaTime * speedMultiplier, 0, Input.GetAxis("Vertical") * Time.deltaTime * speedMultiplier);
 
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
