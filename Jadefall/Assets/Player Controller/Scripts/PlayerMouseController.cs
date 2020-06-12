@@ -7,7 +7,7 @@ public class PlayerMouseController : MonoBehaviour
     public float mouseSensitivity = 400f;
 
     public Transform playerBody;
-
+    public Animator anim;
     public Rigidbody cast;
 
     float xRotation = 0f;
@@ -19,6 +19,7 @@ public class PlayerMouseController : MonoBehaviour
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        anim = GetComponent<Animator>();
     }
 
     void Update()
@@ -35,10 +36,14 @@ public class PlayerMouseController : MonoBehaviour
 
         if (Input.GetButtonDown("Fire1") && canFire == true)
         {
+            anim.SetBool("fireBall", true);
             Rigidbody p = Instantiate(cast, transform.position + (transform.forward * 2), transform.rotation);
             cooldown = 2.0f;
         }
-
+        else
+        {
+            anim.SetBool("fireBall", false);
+        }
         cooldown -= Time.deltaTime;
 
         if (cooldown > 0)

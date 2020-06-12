@@ -98,7 +98,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4662925863876192815}
-  - {fileID: 4662925864191077722}
   - {fileID: 4662925863442119825}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -194,6 +193,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  damagePlayer: 0
+  healPlayer: 0
 --- !u!54 &4662925863365650649
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -241,7 +242,7 @@ Transform:
   m_Children:
   - {fileID: 4662925863117769390}
   m_Father: {fileID: 4662925863365650643}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 20.154001, y: 371.066, z: 13.781001}
 --- !u!33 &4662925863442119831
 MeshFilter:
@@ -321,7 +322,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.56, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 4662925864191077722}
   m_Father: {fileID: 4662925863365650643}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -467,6 +469,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouseSensitivity: 400
   playerBody: {fileID: 4662925863365650643}
+  anim: {fileID: 0}
   cast: {fileID: 3312222073599446717, guid: 66e5f7e4008fb244b8ab7988f911417f, type: 3}
   cooldown: 2
   canFire: 0
@@ -496,11 +499,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4662925864191077797}
   m_LocalRotation: {x: 0.0567263, y: -0.011351921, z: 0.036575295, w: 0.9976551}
-  m_LocalPosition: {x: 0.535, y: 1.066, z: 0.741}
+  m_LocalPosition: {x: 0.535, y: 0.506, z: 0.741}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4662925863365650643}
-  m_RootOrder: 1
+  m_Father: {fileID: 4662925863876192815}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 6.5470004, y: -1.067, z: 4.138}
 --- !u!33 &4662925864191077720
 MeshFilter:
